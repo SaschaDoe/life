@@ -1,0 +1,27 @@
+# MyLife auf Netlify
+# Netlify hostet nur die Oberfläche (public/). Das Gehirn (Server + Claude Code)
+# läuft weiter auf deinem PC. Netlify leitet /api/* über Tailscale Funnel dorthin weiter.
+#
+# In Netlify setzen: Site configuration → Environment variables →
+#   MYLIFE_API_URL = https://dein-pc.tailXXXX.ts.net
+# und danach neu deployen.
+
+[build]
+  publish = "public"
+  command = "node scripts/netlify-build.js"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"
+    X-Frame-Options = "DENY"

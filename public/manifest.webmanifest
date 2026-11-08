@@ -1,0 +1,21 @@
+{
+  "name": "MyLife",
+  "short_name": "MyLife",
+  "description": "Dein KI-Lebens-Coach",
+  "lang": "de",
+  "start_url": "/#heute",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8f1",
+  "theme_color": "#fff8f1",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Schnell merken", "url": "/#merken", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Schoko-Notfall", "url": "/#schoko", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

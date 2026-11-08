@@ -1,0 +1,7 @@
+node_modules/
+data/
+# personal profile – the AI reads it, it stays on this PC
+brain/profile.md
+# generated at Netlify build time
+public/_redirects
+.netlify/

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MyLife</title>
+  <meta name="theme-color" content="#fff8f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1614" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="view" aria-live="polite"></main>
+
+  <button id="fab" class="fab" data-action="openCapture" aria-label="Schnell merken">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </button>
+
+  <nav class="tabs" aria-label="Navigation">
+    <a href="#heute" data-tab="heute"><span class="ti">☀️</span><span>Heute</span></a>
+    <a href="#merken" data-tab="merken"><span class="ti">📝</span><span>Merken</span></a>
+    <a href="#schoko" data-tab="schoko"><span class="ti">🍫</span><span>Schoko</span></a>
+    <a href="#einstellungen" data-tab="einstellungen"><span class="ti">⚙️</span><span>Mehr</span></a>
+  </nav>
+
+  <div id="sheet-backdrop" class="sheet-backdrop" hidden data-action="closeSheetBackdrop">
+    <div id="sheet" class="sheet" role="dialog" aria-modal="true"></div>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
